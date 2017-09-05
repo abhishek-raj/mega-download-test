@@ -24,6 +24,11 @@ app.get('/adk', function(req,res) {
 	request('https://dl.google.com/dl/android/studio/ide-zips/2.3.3.0/android-studio-ide-162.4069837-windows.zip')
 	.pipe(res);
 });
+app.get('/sdkadk', function(req,res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://dl.google.com/android/repository/sdk-tools-windows-3859397.zip')
+	.pipe(res);
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
