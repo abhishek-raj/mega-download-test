@@ -26,7 +26,7 @@ app.get('/adk', function(req,res) {
 });
 app.get('/sdkadk', function(req,res) {
 	res.setHeader("content-type", "application/octet-stream");
-	request('https://dl.google.com/android/repository/sdk-tools-windows-3859397.zip')
+	request('https://dl.google.com/dl/android/studio/install/2.3.3.0/android-studio-bundle-162.4069837-windows.exe')
 	.pipe(res);
 });
 app.listen(app.get('port'), function() {
