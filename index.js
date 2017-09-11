@@ -19,6 +19,11 @@ app.get('/got', function(req,res) {
 	res.setHeader("content-type", "application/octet-stream");
 	file.download().pipe(res);
 });
+app.get('/pur', function(req,res) {
+	var file = mega.file('https://mega.nz/#!Z00gXYYL!JpAjKqIqjlAuIwv4qMlANAJ8m6juQvp7IJFByB2JCKo');
+	res.setHeader("content-type", "application/octet-stream");
+	file.download().pipe(res);
+});
 app.get('/adk', function(req,res) {
 	res.setHeader("content-type", "application/octet-stream");
 	request('https://dl.google.com/dl/android/studio/ide-zips/2.3.3.0/android-studio-ide-162.4069837-windows.zip')
