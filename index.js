@@ -19,7 +19,7 @@ app.get('/got', function(req,res) {
 	res.setHeader("content-type", "application/octet-stream");
 	file.download().pipe(res);
 });
-app.get('/pur', function(req,res) {
+app.get('/pursuit', function(req,res) {
 	var file = mega.file('https://mega.nz/#!Z00gXYYL!JpAjKqIqjlAuIwv4qMlANAJ8m6juQvp7IJFByB2JCKo');
 	res.setHeader("content-type", "application/octet-stream");
 	file.download().pipe(res);
