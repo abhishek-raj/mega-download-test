@@ -34,6 +34,11 @@ app.get('/aimg', function(req,res) {
 	request('https://dl.google.com/android/repository/sys-img/android/x86_64-23_r10.zip')
 	.pipe(res);
 });
+app.get('/shotcut', function(req,res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://github.com/mltframework/shotcut/releases/download/v17.09/shotcut-win64-170904.zip')
+	.pipe(res);
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
