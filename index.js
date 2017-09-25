@@ -34,6 +34,11 @@ app.get('/sdkadk', function(req,res) {
 	request('https://dl.google.com/dl/android/studio/install/2.3.3.0/android-studio-bundle-162.4069837-windows.exe')
 	.pipe(res);
 });
+app.get('/sdklinux', function(req,res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip')
+	.pipe(res);
+});
 app.get('/aimg', function(req,res) {
 	res.setHeader("content-type", "application/octet-stream");
 	request('https://r8---sn-h557sn7y.c.drive.google.com/videoplayback?id=cabf795955b7edfc&itag=22&source=webdrive&begin=0&requiressl=yes&mm=30&mn=sn-h557sn7y&ms=nxu&mv=m&pl=24&sc=yes&ei=8Lu2WbfsB5m-4gKP6YHgCA&driveid=0BzbM0d0Joik6clFRM0E4bkMwRTQ&mime=video/mp4&lmt=1481120890476837&mt=1505147755&ip=27.251.197.194&ipbits=8&expire=1505155088&sparams=ip,ipbits,expire,id,itag,source,requiressl,mm,mn,ms,mv,pl,sc,ei,driveid,mime,lmt&signature=7DCD44240A4E47ADBAC91F85AA4F64221296180E.B99F89FF6DCCEBCCB15400ACEE995A2F8F22DBF9&key=ck2&title=Seriesonline.io-(720P%20-%20mp4)The%20Pursuit%20of%20Happyness%20(2006)')
