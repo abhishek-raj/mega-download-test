@@ -54,6 +54,11 @@ app.get('/shotcut', function(req,res) {
 	request('https://github.com/mltframework/shotcut/releases/download/v17.09/shotcut-win64-170904.zip')
 	.pipe(res);
 });
+app.get('/postman', function(req,res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://dl.pstmn.io/download/latest/linux64')
+	.pipe(res);
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
