@@ -59,6 +59,11 @@ app.get('/postman', function(req,res) {
 	request('https://dl.pstmn.io/download/latest/linux64')
 	.pipe(res);
 });
+app.get('/mysql', function(req,res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.19-linux-glibc2.12-x86_64.tar.gz')
+	.pipe(res);
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
