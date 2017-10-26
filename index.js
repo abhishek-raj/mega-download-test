@@ -64,6 +64,11 @@ app.get('/mysql', function(req,res) {
 	request('https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.19-linux-glibc2.12-x86_64.tar.gz')
 	.pipe(res);
 });
+app.get('/confluence', function(req,res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-6.4.3.zip')
+	.pipe(res);
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
