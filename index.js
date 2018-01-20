@@ -69,6 +69,11 @@ app.get('/confluence', function(req,res) {
 	request('https://downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-6.4.3.zip')
 	.pipe(res);
 });
+app.get('/itunes', function(req, res) {
+	res.setHeader("content-type", "application/octet-stream");
+	request('https://secure-appldnld.apple.com/itunes12/091-56359-20171213-EDF2198A-E039-11E7-9A9F-D21A1E4B8CED/iTunes64Setup.exe')
+	.pipe(res);
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
